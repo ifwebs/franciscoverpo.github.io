@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Flavia Gueiros</title>
+	<base href="https://franciscoverpo.github.io/flavia">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="/js/app.bundle.js"></script>
@@ -74,55 +75,31 @@
 			<div class="container">
 	<div class="row justify-content-center">
 		<div class="col-sm-11">
-			<div class="page-inner">
-				<div class="page-blog">
-					<div class="page-blog-post row">
-						<div class="col-sm-6">
-							<img src="/img/post.jpg">
-						</div>
-						<div class="col-sm-6">
-							<div class="page-meta">
-								<span class="page-meta-date">22/05/2015</span>
-								<span class="page-meta-labels">
-									<span>Categoria 1</span>
-									<span>Categoria 2</span>
-									<span>Categoria 3</span>
-								</span>
-							</div>
-							<div class="page-header">
-								<div class="page-title">Titulo do Post</div>
-								<div class="page-description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-								</div>
-							</div>
-							<a href="#" class="btn btn-lg btn-secondary">
-								LEIA MAIS
-							</a>
-						</div>
+			<div class="page-inner text-center">
+				<div class="page-title">Projects</div>
+				<div class="page-description">
+					The projects are recognized by contemporaneity, agility and professionalism in the execution, with our own team.
+				</div>
+				<div class="page-body">
+					<div id="slider" class="flexslider">
+					  <ul class="slides">
+					    <li><img src="/img/bg/blog.jpg"/></li>
+					    <li><img src="/img/bg/contact.jpg"/></li>
+					    <li><img src="/img/bg/main.jpg"/></li>
+					    <li><img src="/img/bg/partners.jpg"/></li>
+					    <li><img src="/img/bg/main.jpg"/></li>
+					    <li><img src="/img/bg/partners.jpg"/></li>
+					  </ul>
 					</div>
-					<div class="page-blog-post row">
-						<div class="col-sm-6">
-							<img src="/img/post.jpg">
-						</div>
-						<div class="col-sm-6">
-							<div class="page-meta">
-								<span class="page-meta-date">22/05/2015</span>
-								<span class="page-meta-labels">
-									<span>Categoria 1</span>
-									<span>Categoria 2</span>
-									<span>Categoria 3</span>
-								</span>
-							</div>
-							<div class="page-header">
-								<div class="page-title">Titulo do Post só que grande</div>
-								<div class="page-description">
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-								</div>
-							</div>
-							<a href="#" class="btn btn-lg btn-secondary">
-								LEIA MAIS
-							</a>
-						</div>
+					<div id="carousel" class="flexslider">
+					  <ul class="slides">
+					    <li><img src="/img/bg/blog.jpg"/></li>
+					    <li><img src="/img/bg/contact.jpg"/></li>
+					    <li><img src="/img/bg/main.jpg"/></li>
+					    <li><img src="/img/bg/partners.jpg"/></li>
+					    <li><img src="/img/bg/main.jpg"/></li>
+					    <li><img src="/img/bg/partners.jpg"/></li>
+					  </ul>
 					</div>
 				</div>
 			</div>
@@ -169,5 +146,30 @@
 
 		}
 	</script>
-	</body>
+	<script type="text/javascript">
+	
+	window.onload = function() {
+
+		$('#carousel').flexslider({
+			animation: "slide",
+			controlNav: false,
+			animationLoop: false,
+			slideshow: false,
+			itemWidth: 210,
+			itemMargin: 5,
+			asNavFor: '#slider'
+		});
+
+		$('#slider').flexslider({
+			animation: "slide",
+			controlNav: false,
+			animationLoop: false,
+			slideshow: false,
+			sync: "#carousel"
+		});
+		
+	}
+
+</script>
+</body>
 </html>
