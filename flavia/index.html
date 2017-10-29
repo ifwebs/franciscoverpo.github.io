@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Flavia Gueiros</title>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="/js/app.bundle.js"></script>
+	<link rel="stylesheet" href="/vendor_static/vegas/vegas.min.css">
+	<script type="text/javascript" src="/vendor_static/vegas/vegas.min.js"></script>
+	<script type="text/javascript" src="/vendor_static/MenuChef.js"></script>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	</head>
+<body>
+		<main class="home">
+		<header>
+			<div class="container">
+				<div yra-box class="header-row">
+					<div yra-col yra-col-4>
+						<a href="/index.html" class="header-logo">
+							<span yra-box>
+								<span yra-col class="header-logo-figure">
+									<img src="/img/logo.png">
+								</span>
+								<span yra-col class="header-logo-tipo">
+									<img src="/img/logotipo.png">
+								</span>
+							</span>
+						</a>
+					</div>
+					<div yra-col yra-col-6>
+						<ul class="header-menu">
+							<li class="header-menu-page">
+								<a href="/index.html">
+									Home
+								</a>
+							</li>
+							<li class="header-menu-page">
+								<a href="./sobre.html">
+									Sobre
+								</a>
+							</li>
+							<li class="header-menu-page">
+								<a href="/projetos.html">
+									Projetos
+								</a>
+							</li>
+							<li class="header-menu-page">
+								<a href="/blog.html">
+									Novidades
+								</a>
+							</li>
+							<li class="header-menu-page">
+								<a href="/contato.html">
+									Contato
+								</a>
+							</li>
+							<li class="header-menu-icon">
+								<a href="https://www.facebook.com/Flaviagueirosdesigner" target="_blank">
+									<i class="fa fa-facebook"></i>
+								</a>
+							</li>
+							<li class="header-menu-icon">
+								<a href="https://www.instagram.com/flaviagueiros/" target="_blank">
+									<i class="fa fa-instagram"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+					</section>
+		<footer>
+			<div class="container">
+				<div class="footer-copy">
+					&copy; Flavia Gueiro - Todos os direitors reservados 2017
+				</div>
+			</div>
+		</footer>
+	</main>
+	<script type="text/javascript">
+		window.onload = function() {
+			
+			$('main').vegas({
+				delay: 7000,
+				timer: false,
+				shuffle: true,
+				firstTransition: 'fade',
+				firstTransitionDuration: 5000,
+				transition: 'slideDown2',
+				transitionDuration: 2000,
+				slides: [
+				    { src: './img/bg/blog.jpg' },
+				    { src: './img/bg/contact.jpg' },
+				    { src: './img/bg/main.jpg' },
+				    { src: './img/bg/partners.jpg' }
+				]
+			});
+
+			if(!$('main').hasClass('home') && $(window).width() < 768) {
+				new MenuChef('.header-menu a', {
+					theme: {
+						theme: 'side',
+						direction: 'left',
+						effectOnOpen: 'smooth',
+					}
+				})
+			}
+
+		}
+	</script>
+	</body>
+</html>
